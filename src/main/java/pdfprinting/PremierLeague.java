@@ -29,7 +29,7 @@ import java.util.StringTokenizer;
 
 public class PremierLeague {
 
-    private static String destination = "results/chapter01/premier_league.pdf";
+    private static String destination = "results/chapter03/premier_league.pdf";
     private static final String DATA = "src/main/resources/premier_league.csv";
 
     static Color greenColor = new DeviceCmyk(0.78f, 0, 0.81f, 0.21f);

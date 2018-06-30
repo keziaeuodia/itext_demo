@@ -8,7 +8,36 @@
     <artifactId>iText-App</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <!-- Java -->
+        <java.version>1.8</java.version>
+
+        <!-- Third-party libraries -->
+        <spring.version>4.1.4.RELEASE</spring.version>
+        <logback.version>1.1.2</logback.version>
+        <slf4j.version>1.7.10</slf4j.version>
+
+        <!-- Version of maven plugins -->
+        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+
+        <!-- Source code encoding -->
+        <source.encoding>UTF-8</source.encoding>
+    </properties>
+
     <dependencies>
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.8-dmr</version>
+        </dependency>
+        <!-- MYBATIS -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+        <!-- iTEXT -->
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>kernel</artifactId>
@@ -39,11 +68,32 @@
             <artifactId>pdftest</artifactId>
             <version>7.0.4</version>
         </dependency>
+
+        <!-- LOGGING -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.18</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.0</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

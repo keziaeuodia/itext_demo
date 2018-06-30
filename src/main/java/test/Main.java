@@ -1,9 +1,6 @@
 package test;
 
-import pdfprinting.HelloWorld;
-import pdfprinting.PremierLeague;
-import pdfprinting.RickAstley;
-import pdfprinting.States;
+import pdfprinting.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,6 +10,8 @@ public class Main {
         //HelloWorld.printHelloWorld();
         //RickAstley.printRickAstley();
         //States.printTable();
-        PremierLeague.printPremierLeague();
+        //PremierLeague.printPremierLeague();
+        Films films = new Films();
+        films.printTable();
     }
 }
